@@ -1,0 +1,14 @@
+.swapper {
+  display: flex;
+}
+.swapper h3 {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 7px;
+}
+
+.swapper h3:hover {
+  color: white;
+  background: #171717;
+}
