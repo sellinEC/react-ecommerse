@@ -30,6 +30,11 @@
 .cart-right div:last-child {
   border: none;
 }
+.cart-info {
+  display: flex;
+  flex-wrap: wrap;
+  /* border: 1px solid black; */
+}
 
 .cart-info p {
   padding: 8px;
@@ -46,31 +51,6 @@
 
 .cart-right div button:hover {
   opacity: 0.8;
-}
-.order-holder {
-  background: rgb(197, 194, 194);
-  padding: 0.5rem;
-  margin-top: 1rem;
-}
-.order-holder h4 {
-  background: #fff;
-  border-bottom: 1px solid gray;
-  padding: 5px;
-}
-.order-holder span {
-  /* position: absolute; */
-  background: #fff;
-  border-bottom: 1px solid gray;
-  padding: 5px;
-}
-.holder-bottom {
-  display: flex;
-  /* border: 1px solid black; */
-  align-items: center;
-  justify-content: space-between;
-}
-.shipped-btn {
-  padding: 0.5rem 1rem;
 }
 
 @media (max-width: 1320px) {

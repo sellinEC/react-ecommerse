@@ -1,0 +1,39 @@
+.card {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  padding: 1rem 0.5rem;
+  margin: 0.5rem;
+  background: #fff;
+}
+/* .card div {
+} */
+.card div:last-child {
+  border: none;
+}
+.names {
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.email {
+  padding: 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.orders {
+  padding: 1px;
+}
+.delete {
+  margin-top: 1.5rem;
+  padding: 5px 10px;
+  color: #fff;
+  background: #171717;
+  /* border: 1px solid #171717; */
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.delete i {
+  color: red;
+}
+.delete:hover,
+.delete i:hover {
+  color: black;
+  background: red;
+}

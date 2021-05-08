@@ -118,3 +118,21 @@ exports.getUser = (req, res) => {
     .then(user => res.status(200).json(user))
     .catch(err => res.status(404).json(err))
 }
+
+exports.deleteUser = (req, res) => {
+User.deleteOne({ _id: req.params.id })
+  .then(() => {
+    res.status(200).json({
+      statusCode: 200,
+      status: true,
+      message: 'Product deleted'
+    })
+  })
+  .catch(() => {
+    res.status(500).json({
+      statusCode: 500,
+      status: false,
+      message: 'Failed to delete product'
+    })
+  })
+}

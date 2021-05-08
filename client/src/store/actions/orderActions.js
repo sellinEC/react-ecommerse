@@ -1,6 +1,8 @@
 import axios from 'axios';
 import actiontypes from '../actiontypes';
 
+
+
 export const createOrder = (order) => {
   
   return async dispatch => {
@@ -12,6 +14,7 @@ export const createOrder = (order) => {
     console.log(_order)
     await axios.post('http://localhost:9999/api/orders/new', _order)
     dispatch({ type: actiontypes().order.createOrder })
+    
   }
 
 }

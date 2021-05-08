@@ -86,6 +86,11 @@ const Dashboard = () => {
       <div className="cart-info">
         User name eller nåt
       </div>
+      <div>
+        <Link to="/admin/users">
+        <button>Administer users</button>
+        </Link>
+      </div>
   
       <div>
         <button onClick={() => handleLogout()}>Sign out</button>

@@ -1,10 +1,15 @@
 import './AdminUsers.css'
+import UserComponent from '../components/UserComponent'
 import {useEffect} from 'react'
-import {useDispatch} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
 import React from 'react'
 import { getUsers } from '../store/actions/adminActions'
 
+
 const AdminUsers = () => {
+  const isAdmin = sessionStorage.getItem('isAdmin')
+  const users = useSelector(state => state.admin.adminUsers)
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getUsers())
@@ -17,10 +22,15 @@ const AdminUsers = () => {
     <div className="cart">
        <div className="cart-left">
       <div className="cart-info">
-        User name eller nåt
+      {isAdmin?
+      users && users.map(user => (
+        <UserComponent key={user._id} user={user}/>
+      ))
+      : <h3>Restricted area. Log in with credentials</h3>
+      }
       </div>
       <div>
-        <button onClick={() => console.log('hej')}>Sign out</button>
+        
       </div>
       
       </div>

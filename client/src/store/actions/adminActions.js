@@ -1,6 +1,7 @@
 import axios from 'axios'
 import actiontypes from '../actiontypes'
 
+
 export const getUser = id => {
   return async dispatch => {
     const res = await axios.get(`http://localhost:9999/api/users/${id}`)
@@ -28,3 +29,17 @@ export const setAdminUsers = (users) => {
     payload: users
   }
 }
+
+export const deleteUser = id => {
+  return async dispatch => {
+    await axios.delete(`http://localhost:9999/api/users/${id}`)
+    dispatch({
+      type: actiontypes().admin.deleteUser
+    })
+  }
+}
+// export const removeUser = () => {
+//   return {
+    
+//   }
+// }

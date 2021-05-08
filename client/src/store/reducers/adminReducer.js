@@ -18,6 +18,8 @@ const adminReducer = (state = initState, action) => {
         ...state,
         adminUsers: action.payload
       }
+    case actiontypes().admin.deleteUser:
+      return state
 
     default:
       return state 

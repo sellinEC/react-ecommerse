@@ -14,11 +14,13 @@ const actiontypes= () => {
       login: 'LOGIN_USER',
       logout: 'LOGOUT_USER',
       check: 'CHECK_USER',
-      set: 'SET_USER'
+      set: 'SET_USER',
+      
     },
     admin: {
       setAdminUsers: 'SET_ADMIN_USERS',
-      setAdminUser: 'SET_ADMIN_USER'
+      setAdminUser: 'SET_ADMIN_USER',
+      deleteUser: 'DELETE_USER'
     },
     order: {
       createOrder: 'CREATE_ORDER',
