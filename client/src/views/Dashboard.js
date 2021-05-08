@@ -1,5 +1,5 @@
 import './Dashboard.css'
-import {useEffect} from 'react'
+import {useEffect, useState} from 'react'
 import OrderItem from '../components/OrderItem'
 import {useSelector, useDispatch} from 'react-redux'
 import {useHistory, Link} from 'react-router-dom'
@@ -11,8 +11,12 @@ const Dashboard = () => {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const orders = useSelector(state => state.order.orders)
+  const [showHistory, setShowhistory] = useState(false)
+
+  const getter = useSelector(state => state.order.orders)
   const adminOrders = useSelector(state => state.order.adminOrders)
+  
+  const orders = getter ? showHistory ?  getter.filter(order =>  order.shipped ) :getter.filter(order =>  !order.shipped ) : 0
   // const products = useSelector(state => state.order.orders.products)
 
   const handleLogout = () =>{
@@ -36,11 +40,12 @@ const Dashboard = () => {
 
   return (
     <div className="cart">
+     
       {
       isAdmin ? 
       <h3>Adminster orders</h3>
       :
-      <h3>Active orders</h3>
+      orders && orders.length < 1 ? <div><h3>No active orders</h3></div>  : showHistory ? <h3>Order history</h3> : <h3>Active orders</h3>
     }
     <div className="cart-left">
     {
@@ -73,11 +78,9 @@ const Dashboard = () => {
       </div> 
     ))
     }
+    
 
-    {
-      orders && orders.length < 1 && 
-      <div><h3>No active orders</h3></div>
-    }
+    
      
      
     </div>
@@ -87,12 +90,19 @@ const Dashboard = () => {
         User name eller nåt
       </div>
       <div>
+      {
+        isAdmin ?
+      <div>
         <Link to="/admin/users">
         <button>Administer users</button>
         </Link>
       </div>
+      :
+      
+        <button onClick={() => setShowhistory(!showHistory)}>Order history</button>
+      
+      }
   
-      <div>
         <button onClick={() => handleLogout()}>Sign out</button>
 
       </div>

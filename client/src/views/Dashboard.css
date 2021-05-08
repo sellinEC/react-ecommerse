@@ -42,6 +42,7 @@
   color: #f4f4f4;
   border: 1px solid #171717;
   cursor: pointer;
+  margin-bottom: 5px;
 }
 
 .cart-right div button:hover {

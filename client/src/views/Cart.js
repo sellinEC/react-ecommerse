@@ -59,7 +59,7 @@ const Cart = () => {
         }
         <div>
           {
-            shoppingCart.length > 1 ?
+            shoppingCart.length >= 1 ?
           <Link to='/dashboard'>
           <button onClick={() => dispatch(createOrder(order))}>Proceed to checkout</button>
           </Link>

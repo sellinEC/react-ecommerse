@@ -54,8 +54,6 @@ export const  toggleShipped = (id, bool) => {
     shipped: bool
   }
   await axios.put(`http://localhost:9999/api/orders/${id}`, payload)
-    await dispatch({
-      type: actiontypes().order.toggleShipped
-    })
+    await dispatch(getAdminOrders())
   }
 }
