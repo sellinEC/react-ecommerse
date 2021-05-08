@@ -52,6 +52,12 @@ const cartReducer = (state = initState, action) => {
       state.totalQuantity = getTotalQuantity(state.shoppingCart);
       return state
     }
+    case actiontypes().cart.clear: {
+      return {
+        ...state,
+        shoppingCart: []
+      }
+    }
     default:
       return state
   }
@@ -74,5 +80,7 @@ const getTotalPrice = cart => {
   });
   return total
 }
+
+ 
 
 export default cartReducer

@@ -14,6 +14,7 @@ export const createOrder = (order) => {
     console.log(_order)
     await axios.post('http://localhost:9999/api/orders/new', _order)
     dispatch({ type: actiontypes().order.createOrder })
+    dispatch(getOrders(order.id))
     
   }
 

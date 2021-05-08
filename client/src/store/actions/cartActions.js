@@ -20,3 +20,9 @@ export const deleteProduct = id => {
     payload: id
   }
 }
+
+export const clearCart = () => {
+  return {
+    type: actiontypes().cart.clear
+  }
+}
