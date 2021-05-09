@@ -3,11 +3,12 @@
   padding: 1rem;
   margin-bottom: 8px;
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 2fr 2fr;
   gap: 8px;
   background: #fff;
   border-radius: 2px;
-  place-items: center;
+  /* place-items: center; */
+  justify-content: space-between;
 }
 .cartitem-image img {
   width: 55px;

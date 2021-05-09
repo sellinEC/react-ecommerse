@@ -5,6 +5,7 @@ const SideBar = ({show, click}) => {
 
   const sideBarClass = ["sidebar"];
   const quantity = useSelector(state => state.cart.totalQuantity)
+  let token = useSelector(state => state.user.loggedIn)
 
   if(show) {
     sideBarClass.push("show")
@@ -28,6 +29,18 @@ const SideBar = ({show, click}) => {
         <li>
           <Link to="/"> Shop</Link>
         </li>
+        {token ? <li>
+        <Link to="/dashboard">
+        Dashboard
+        {/* <h3 onClick={() => dispatch(logoutUser())}>Logout</h3> */}
+        </Link>
+        </li>
+        : <li>
+        <Link to="/login">
+        <h3>Login</h3>
+        </Link>
+        </li>
+        }
       </ul>
 
     </div>

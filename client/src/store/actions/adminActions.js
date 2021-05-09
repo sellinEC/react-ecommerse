@@ -6,6 +6,7 @@ export const getUser = id => {
   return async dispatch => {
     const res = await axios.get(`http://localhost:9999/api/users/${id}`)
     dispatch(setAdminUser(res.data))
+    console.log(res.data)
   }
 }
 

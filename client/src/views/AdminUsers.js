@@ -3,10 +3,12 @@ import UserComponent from '../components/UserComponent'
 import {useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import React from 'react'
+import {Link} from 'react-router-dom'
 import { getUsers } from '../store/actions/adminActions'
 
 
 const AdminUsers = () => {
+  
   const isAdmin = sessionStorage.getItem('isAdmin')
   const users = useSelector(state => state.admin.adminUsers)
 
@@ -39,7 +41,9 @@ const AdminUsers = () => {
         User name eller nåt
       </div>
       <div>
-        <button onClick={() => console.log('hej')}>Sign out</button>
+        <Link to="/dashboard">
+        <button>Dashboard</button>
+        </Link>
       </div>
       
       </div>

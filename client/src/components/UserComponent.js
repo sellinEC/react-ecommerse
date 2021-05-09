@@ -18,7 +18,7 @@ const UserComponent = ({user}) => {
           {user.email}
         </div>
         <div className="orders">
-          <Link to={`/users/${user._id}`}>
+          <Link to={`/admin/users/${user._id}`}>
           Active orders
           </Link>
         </div>

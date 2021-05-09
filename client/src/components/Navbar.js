@@ -38,7 +38,7 @@ const Navbar = ({click}) => {
         </li>
         {token ? <li>
         <Link to="/dashboard">
-        <i className="fas fa-cogs"></i>
+        <h3>Dashboard</h3>
         {/* <h3 onClick={() => dispatch(logoutUser())}>Logout</h3> */}
         </Link>
         </li>
