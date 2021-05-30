@@ -1,4 +1,4 @@
-// VAr en liten bonus jag lekte med men aldrig fick att funka. Lyckas inte få en live-uppdatering här men funktionaliteten från uppgiften borde sitta iaf.
+// VAr en liten bonus jag lekte med men aldrig fick att funka. Lyckas inte få en live-uppdatering här men funktionaliteten från uppgiften borde sitta iaf. 
 
 
 import {useEffect} from 'react'

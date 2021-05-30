@@ -1,3 +1,4 @@
+// Var en liten bonus jag lekte med men aldrig fick att funka. Lyckas inte få en live-uppdatering här men funktionaliteten från uppgiften borde sitta iaf. Med window.reload fick jag det att funka men blev för oskönt för att det skulle kännas bra haha
 import {useEffect} from 'react'
 import OrderItem from './OrderItem'
 import {toggleShipped} from '../store/actions/orderActions'
