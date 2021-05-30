@@ -4,6 +4,7 @@ const initState = {
   adminUser: null,
   adminUsers: null,
 
+
 }
 
 const adminReducer = (state = initState, action) => {

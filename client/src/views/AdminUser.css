@@ -7,7 +7,7 @@
 } */
 .orders-left {
   display: grid;
-  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-columns: 2fr 2fr;
   gap: 8px;
   /* width: 50%; */
   /* border: 5px solid black; */

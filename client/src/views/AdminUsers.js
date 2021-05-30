@@ -10,7 +10,7 @@ import { getUsers } from '../store/actions/adminActions'
 const AdminUsers = () => {
   
   const isAdmin = sessionStorage.getItem('isAdmin')
-  const users = useSelector(state => state.admin.adminUsers)
+  let users = useSelector(state => state.admin.adminUsers)
 
   const dispatch = useDispatch();
   useEffect(() => {

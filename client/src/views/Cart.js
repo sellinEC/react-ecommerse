@@ -11,6 +11,7 @@ import {Link} from 'react-router-dom'
 
 const Cart = () => {
 
+  const isLoggedin = sessionStorage.getItem('token')
   const dispatch = useDispatch();
   
   const quantity = useSelector(state => state.cart.totalQuantity)
@@ -59,12 +60,14 @@ const Cart = () => {
         }
         <div>
           {
+            isLoggedin ?
             shoppingCart.length >= 1 ?
           <Link to='/dashboard'>
           <button onClick={() => dispatch(createOrder(order))}>Proceed to checkout</button>
           </Link>
           :
           <button >Nothing to check out</button>
+          : <button >Log in to check out</button>
           }
           {/* <button onClick={() => dispatch(getOrders(id))}></button> */}
         </div>

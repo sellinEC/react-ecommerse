@@ -39,27 +39,42 @@ const AdminUser = () => {
      
 
   <div className="cart-left">
-{
+  {
   
   orders && orders.length < 1 ? <div><h3>No active orders</h3></div>  :  <h3>Active orders</h3>
 }
-
   <div className="orders-left">
 
+{
+  orders && orders.map(order => {
+    if(!order.shipped) {
+      return <OrderComponent key={order._id} order={order}  />
 
-
-   <OrderComponent  bool={false}  />
- 
-
+    }
+})
+}
   </div>
 {
   
   orders && orders.length < 1 ? <div><h3>No active orders</h3></div>  :  <h3>Shipped orders</h3>
 }
   <div className="orders-right">
-  <OrderComponent  bool={true}  />
+  {
 
-  </div>
+orders && orders.map(order => {
+  if(order.shipped){
+    return <OrderComponent key={order._id} order={order} />
+
+  }
+  
+})
+
+}
+</div>
+  
+
+   
+</div>
   <div className="cart-right">
     
     <div className="cart-info">
@@ -76,10 +91,11 @@ const AdminUser = () => {
 
     </div>
   </div>
+</div>
 
-</div>
-</div>
-)
+
+  )
+
 }
 
 export default AdminUser

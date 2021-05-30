@@ -49,7 +49,7 @@ exports.updateOrder = (req, res) => {
     res.status(200).json({
       statusCode: 200,
       status: true,
-      message: 'Product updated successfully'
+      message: 'Order updated successfully'
     })
   })
   .catch(() => {

@@ -22,7 +22,7 @@ export const loginUser = user => {
     sessionStorage.setItem('userId', res.data.id)
     // sessionStorage.setItem('userId', res.data.name)
     if(res.data.isAdmin){
-      sessionStorage.setItem('isAdmin',res.data.isAdmin)
+      sessionStorage.setItem('isAdmin', res.data.isAdmin)
     }
     dispatch(setUser(res.data))
     console.log(res.data)

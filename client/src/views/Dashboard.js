@@ -87,16 +87,16 @@ const Dashboard = () => {
     <div className="cart-right">
       
       <div className="cart-info">
-        User name eller nåt
+       
       </div>
       <div>
       {
         isAdmin ?
-      <div>
+      
         <Link to="/admin/users">
         <button>Administer users</button>
         </Link>
-      </div>
+      
       :
       
         <button onClick={() => setShowhistory(!showHistory)}>Order history</button>
